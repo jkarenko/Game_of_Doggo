@@ -9,6 +9,7 @@ var is_lying_down = false
 var is_howling = false
 var is_sleeping = false
 var is_pooping = false
+var is_peeing = false
 var movement_keys = [KEY_W, KEY_S, KEY_A, KEY_D]
 var current_velocity = Vector2()
 var speech_offset = Vector2(12, -10)
@@ -107,6 +108,8 @@ func _process(delta):
 			$Dog.play("sleep")
 		elif is_pooping:
 			$Dog.play("poop")
+		elif is_peeing:
+			$Dog.play("pee")
 		else:
 			if idle_time > 800:
 				$Dog.play("wag")
@@ -126,3 +129,4 @@ func _process(delta):
 	is_howling = Input.is_key_pressed(KEY_F)  # This doesn't work with a controller
 	is_sleeping = Input.is_key_pressed(KEY_R)
 	is_pooping = Input.is_key_pressed(KEY_C)
+	is_peeing = Input.is_key_pressed(KEY_V)
