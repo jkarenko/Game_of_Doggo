@@ -8,9 +8,11 @@ var is_sniffing = false
 var is_lying_down = false
 var is_howling = false
 var is_sleeping = false
+var is_pooping = false
 var movement_keys = [KEY_W, KEY_S, KEY_A, KEY_D]
 var current_velocity = Vector2()
 var speech_offset = Vector2(12, -10)
+var idle_time = 0
 
 func _ready():
 	$Dog.global_position = Vector2(600, 250)
@@ -103,11 +105,17 @@ func _process(delta):
 			$Dog/DogSpeech.play()
 		elif is_sleeping:
 			$Dog.play("sleep")
-			
+		elif is_pooping:
+			$Dog.play("poop")
 		else:
-			$Dog.play("idle1")
+			if idle_time > 800:
+				$Dog.play("wag")
+				idle_time = 0 if idle_time > 960 else idle_time 
+			else: 
+				$Dog.play("idle1")
 			$Dog/DogSpeech.visible = false
 			$Dog/DogSpeech.stop()
+			idle_time += 1
 	
 	# Update labels
 	#$CanvasLayer/VelocityLabel.text =  "%s\n%s\n%s\n%s\n%s" % [str(current_velocity), str(current_velocity.length()), input_velocity, taper_acceleration, input_velocity.angle()]
@@ -117,3 +125,4 @@ func _process(delta):
 	is_lying_down = Input.is_action_pressed("lie_down")
 	is_howling = Input.is_key_pressed(KEY_F)  # This doesn't work with a controller
 	is_sleeping = Input.is_key_pressed(KEY_R)
+	is_pooping = Input.is_key_pressed(KEY_C)

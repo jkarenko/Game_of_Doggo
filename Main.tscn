@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cyj713gd34n0r"]
+[gd_scene load_steps=50 format=3 uid="uid://cyj713gd34n0r"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_0yr7k"]
 [ext_resource type="Texture2D" uid="uid://bj1n0uic71htg" path="res://Doggo 1.png" id="2_ottcr"]
@@ -84,6 +84,10 @@ region = Rect2(240, 96, 16, 16)
 atlas = ExtResource("2_ottcr")
 region = Rect2(256, 96, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba8jf"]
+atlas = ExtResource("2_ottcr")
+region = Rect2(0, 64, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_togsr"]
 atlas = ExtResource("2_ottcr")
 region = Rect2(0, 112, 16, 16)
@@ -127,6 +131,22 @@ region = Rect2(0, 48, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rp0u8"]
 atlas = ExtResource("2_ottcr")
 region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2y0x"]
+atlas = ExtResource("2_ottcr")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad4jb"]
+atlas = ExtResource("2_ottcr")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8413o"]
+atlas = ExtResource("2_ottcr")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi8f2"]
+atlas = ExtResource("2_ottcr")
+region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8c8fw"]
 atlas = ExtResource("2_ottcr")
@@ -222,6 +242,14 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba8jf")
+}],
+"loop": true,
+"name": &"poop",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 4.0,
 "texture": SubResource("AtlasTexture_togsr")
 }, {
@@ -284,6 +312,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_a2y0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad4jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8413o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi8f2")
+}],
+"loop": true,
+"name": &"wag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8c8fw")
 }, {
 "duration": 1.0,
@@ -342,8 +387,7 @@ script = ExtResource("1_0yr7k")
 [node name="Dog" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_61g4t")
-animation = &"sleep"
-frame_progress = 0.151591
+animation = &"wag"
 
 [node name="DogSpeech" type="AnimatedSprite2D" parent="Dog"]
 visible = false
