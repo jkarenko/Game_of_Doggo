@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj8p21fc28jdh"
-path="res://.godot/imported/Doggo 2.png-bd1ce9e637e620606adce9d6cd26d49e.ctex"
+uid="uid://c05bmyg085pwv"
+path="res://.godot/imported/poop.png-693770b875fd0b901bf2fe101044b02d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Doggo 2.png"
-dest_files=["res://.godot/imported/Doggo 2.png-bd1ce9e637e620606adce9d6cd26d49e.ctex"]
+source_file="res://assets/sprites/objects/poop.png"
+dest_files=["res://.godot/imported/poop.png-693770b875fd0b901bf2fe101044b02d.ctex"]
 
 [params]
 

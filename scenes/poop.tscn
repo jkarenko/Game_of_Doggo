@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://1kx2xdy1udxh"]
+
+[ext_resource type="Texture2D" uid="uid://c05bmyg085pwv" path="res://assets/sprites/objects/poop.png" id="1_3vdge"]
+[ext_resource type="Script" path="res://scripts/poop.gd" id="2_xpyr5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jal3f"]
+atlas = ExtResource("1_3vdge")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuvaf"]
+atlas = ExtResource("1_3vdge")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4feyu"]
+atlas = ExtResource("1_3vdge")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkv63"]
+atlas = ExtResource("1_3vdge")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yp54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jal3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuvaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4feyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkv63")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Poop" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3yp54")
+script = ExtResource("2_xpyr5")

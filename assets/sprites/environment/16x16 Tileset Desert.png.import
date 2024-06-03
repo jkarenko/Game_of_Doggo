@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brmdwg2s5yxrt"
-path="res://.godot/imported/Awoo.png-0b17e360c22b9bcce1428867b9ebafcd.ctex"
+uid="uid://17rdyw5udwjj"
+path="res://.godot/imported/16x16 Tileset Desert.png-fe863263af51ba6bf6abde9f993bd3cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Awoo.png"
-dest_files=["res://.godot/imported/Awoo.png-0b17e360c22b9bcce1428867b9ebafcd.ctex"]
+source_file="res://assets/sprites/environment/16x16 Tileset Desert.png"
+dest_files=["res://.godot/imported/16x16 Tileset Desert.png-fe863263af51ba6bf6abde9f993bd3cc.ctex"]
 
 [params]
 

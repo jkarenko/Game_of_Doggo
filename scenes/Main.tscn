@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyj713gd34n0r"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_ybtas"]
+[ext_resource type="PackedScene" uid="uid://brrxdo0le0lpv" path="res://scenes/Dog.tscn" id="2_wnxap"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ybtas")
+
+[node name="Dog" parent="." instance=ExtResource("2_wnxap")]
+visible = false
+script = null
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VelocityLabel" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
